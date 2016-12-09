@@ -1,6 +1,6 @@
 def playAgain():
       print('Play Again? (yes or no)')
-    return input().lower().startswith('y')
+      return input().lower().startswith('y')
 
 
 print('H A N G M A N')
@@ -25,7 +25,7 @@ while True:
                 foundAllLetters = False
                 break
         if foundAllLetters:
-            print('You guessed the correct word. It is: "' + secretWord + '"!')
+            print('You guessed the correct name! It is: !"' + secretWord + '"!')
             gameIsDone = True
     else:
         missedLetters = missedLetters + guess
@@ -33,7 +33,7 @@ while True:
        
         if len(missedLetters) == len(HANGMANPICS) - 1:
             displayBoard(HANGMANPICS, missedLetters, correctLetters, secretWord)
-            print('No more guesses!\nAfter ' + str(len(missedLetters)) + ' missed guesses and ' + str(len(correctLetters)) + ' correct guesses. the correct word was "' + secretWord + '"')
+            print('No more guesses!\nYou had ' + str(len(missedLetters)) + ' missed guesses and ' + str(len(correctLetters)) + ' correct guess. The correct word was "' + secretWord + '"')
             gameIsDone = True
 
     
